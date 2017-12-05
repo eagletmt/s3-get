@@ -5,7 +5,7 @@ VERSION=0.1.0
 
 rm -r pkg
 
-gox -verbose -output 'pkg/{{.OS}}_{{.Arch}}/s3-get'
+CGO_ENABLED=0 gox -verbose -output 'pkg/{{.OS}}_{{.Arch}}/s3-get'
 
 cd pkg
 for pkg in *

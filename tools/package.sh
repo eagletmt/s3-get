@@ -3,7 +3,7 @@ set -ex
 
 VERSION=0.1.1
 
-rm -r pkg
+rm -rf pkg
 
 CGO_ENABLED=0 gox -verbose -output 'pkg/{{.OS}}_{{.Arch}}/s3-get'
 
